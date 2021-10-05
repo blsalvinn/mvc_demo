@@ -7,6 +7,7 @@
     <title>EDIT USER</title>
 </head>
 <body>
+<a href="?action=product" style="color: red;">PRODUCT</a>
     <h3>EDIT PRODUCT</h3>
         <form action="" method="POST">
             <table>
@@ -28,7 +29,7 @@
                 </tr>
                 <tr>
                     <td>Price</td>
-                    <td><input type="text" name="price" value="<?php echo $dataID[0]['price']?>" placeholder="price..."></td>   
+                    <td><input type="text" name="price" value="<?php echo $dataID[0]['price']?>" placeholder="price...">&nbsp;VND</td>   
                 </tr>
                 <tr>
                     <td>Create_date</td>
@@ -40,5 +41,6 @@
                 </tr>
             </table>
         </form>
+        
 </body>
 </html>

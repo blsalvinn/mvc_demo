@@ -7,9 +7,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="View/style/js/javascript.js"></script>
     <title>ADD USER</title>
+    <a href="?action=index" style="color: red; border-bottom: 1px red;">USER</a>&nbsp;&nbsp;
 </head>
 <body>
     <h3>ADD USER</h3>
+    <a href="?action=index" style="color: red; border-bottom: 1px red;">USER</a>
         <form action="" method="POST">
             <table>
                 <tr>

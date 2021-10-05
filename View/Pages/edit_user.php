@@ -7,6 +7,7 @@
     <title>EDIT USER</title>
 </head>
 <body>
+<a href="?action=index" style="color: red; border-bottom: 1px red;">USER</a>
     <h3>EDIT USER</h3>
         <form action="" method="POST">
             <table>
@@ -32,5 +33,6 @@
                 </tr>
             </table>
         </form>
+   
 </body>
 </html>
