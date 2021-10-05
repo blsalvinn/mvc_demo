@@ -37,9 +37,16 @@ class model extends DB {
         $this->con->execute($sql);
     }
     public function login($id){
-        $str="SELECT * FROM  user  WHERE email = '".$id['email']."' and   pass = '".$id['pass']."'";
-		$data=$this->con->Select($str);
-		return $data;
+        // if((!isset($id['email'])) &&  (!isset($id['pass']))){
+           
+        // }
+        if((isset($id['email'])) &&  (isset($id['pass']))){
+            $str="SELECT * FROM  user  WHERE email = '".$id['email']."' and   pass = '".$id['pass']."'";
+            echo $str;
+            $data=$this->con->Select($str);
+            return $data;
+        }
+      
     }
     public function checkLevel($lv){
         $str = "SELECT * FROM user WHERE level like 'lv'";
