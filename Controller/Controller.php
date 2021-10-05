@@ -20,14 +20,18 @@ class Controller{
         
          switch($action){
             case 'index':
+                if(isset($_SESSION['login'])){
                  $dt = $this->model->getList();
                 // print_r($dt);
-                include_once 'View/index.php';
+                include_once 'View/index.php';}
+             
+                
                 break;
             case 'product':
+                if(isset($_SESSION['login'])){
                 $dt = $this->model->getList_pro();
                 // print_r($dt);
-                include_once 'View/product.php';
+                include_once 'View/product.php';} 
                 break;
             // case 'product_home':
             //     $data = $this->model->getList_pro();
@@ -35,6 +39,7 @@ class Controller{
             //     include_once 'View/Page.php';
             //     break;
             case 'home_ad':
+                echo " <a href=\"?action=index\">ADMIN</a>";
                 if(isset($_SESSION['login'])){
                     include_once 'View/Page.php';
                 }
@@ -81,17 +86,21 @@ class Controller{
                     }require_once 'View/Home.php';  
                 break;
             case 'login':
+           
                 if($dt=$this->validate()){
                     return $dt;
                 } 
-                $emailErr = 'Input Email';
-                $passErr = 'Input Pass';
                 include_once "View/Pages/login.php";
-                if(isset($_POST['email']) &&  $_POST['pass']){
+                if((isset($_POST['email'])) &&  (isset($_POST['pass']))){
                     $email = $_POST['email'];
                     $pass = $_POST['pass'];
                     $pass = md5($pass);
                 }
+                if(isset($_POST['login_'])){
+                    if((empty($_POST['email']) || empty($_POST['pass']))||(empty($_POST['email']) && empty($_POST['pass']))){
+                            echo 'input thieu thong tin';
+                    }
+                  }
                 if($data=$this->model->login($_POST)){
                     Session::session_set("login",$data);
                     // echo $_SESSION['login'][0]['email'];
@@ -164,10 +173,12 @@ class Controller{
     public function validate()
     {   
         $error = array();
+        if(isset($_POST['email'])){
         $email = $_POST['email'];
         if(!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $email)){
             echo $error = "loi dinh dang email "." '" .'abc@123.xyz'."'" ;
         }
+    }
     }
 }
 ?>
