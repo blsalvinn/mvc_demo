@@ -12,11 +12,19 @@
     <table>
         <tr>
             <td>Email:</td> 
-            <td><input type="text" name="email"></td>
+            <td><input type="text"  name="email" value="" ></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><?php if(empty($_POST["email"])){echo $emailErr;} ?></td>
         </tr>
         <tr>
             <td>Pass:</td> 
             <td><input type="text" name="pass"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><?php if(empty($_POST["pass"])){echo $passErr;} ?>
         </tr>
     </table>
     <input type="submit" name="login_" value="Login">
