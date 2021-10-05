@@ -1,26 +1,22 @@
 <?php
 class Session
-{
-	
-	//set session (SET)
+{	
+	//ss : session
+	//Set ss
 	static function session_set($key, $val){
-		
 		$_SESSION[$key] = $val;
 	}
 
-	// get session (GET)
+	//Get ss
 	static function session_get($key){
 		return (isset($_SESSION[$key])) ? $_SESSION[$key] : false;
 	}
 
-	// del session (DELETE)
+	//Delete ss
 	static function session_delete($key){
 		if (isset($_SESSION[$key])) {
 			unset($_SESSION[$key]);
 		}
 	}
 }
-
-
-
 ?>

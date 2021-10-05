@@ -1,4 +1,4 @@
 <?php 
-    spl_autoload_register('autoload');
+    // spl_autoload_register('autoload');
 
 ?>
