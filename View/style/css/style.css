@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+a {
+    color: rgb(105, 15, 15);
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    justify-content: space-between;
+    display: flex;
+}
+
+.login_home {
+    padding-top: 32px;
+    margin-right: 10px;
+}
+
+.menu {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 15px;
+}
+
+.nav-item a {
+    font-size: 24px;
+}
+
+.logo img {
+    width: 35%;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.form-inline {
+    display: flex;
+}
+
+.form-inline {
+    padding-right: 25px;
+}
+
+.form-inline button {
+    cursor: pointer;
+}
+
+.row_pr {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.product__img img {
+    width: 220px;
+    height: 175px;
+}
+
+.product__img img {
+    cursor: pointer;
+}
+
+product__name a:hover {
+    border-bottom: 1px;
+    color: red;
+}
+
+.footer_pr {
+    text-align: center;
+    padding: 15px 15px;
+}
+
+.icon-pro-01>ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.footer_pr h3 {
+    color: blue;
+}
+
+.pr_content {
+    padding: 53px;
+}
+
+.add_to_card a:hover {
+    border-bottom: 1px;
+    color: red;
+}
+
+.add_to_card a:before {
+    border-bottom: 1px;
+    color: red;
+}
